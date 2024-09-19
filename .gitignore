@@ -2,7 +2,5 @@ __pycache__
 *.pyc
 .env
 venv/
-*.csv
-data/
+*.json
 venv
-data
