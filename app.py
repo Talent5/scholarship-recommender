@@ -15,7 +15,7 @@ app = Flask(__name__)
 
 # Initialize the ScholarshipRecommender
 firebase_credentials = json.loads(os.getenv('FIREBASE_CREDENTIALS', '{}'))
-scholarship_data_path = os.getenv('SCHOLARSHIP_DATA_PATH')
+scholarship_data_path = os.getenv('SCHOLARSHIP_DATA_PATH', 'data/scholarships.csv')
 recommender = ScholarshipRecommender(firebase_credentials, scholarship_data_path)
 
 def update_recommendations():
